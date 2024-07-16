@@ -1,0 +1,13 @@
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --light: #FDF7F4;
+  --orange: #FFD18C;
+  --dark-orange: #FFA724;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
