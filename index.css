@@ -152,3 +152,62 @@ main {
   background-color: var(--dark-orange);
   color: var(--white); 
 }
+
+/*  section two */
+
+h3{
+  color: #000;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 1rem;
+}
+
+.account-contaier{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+}
+.accounts{
+  width: 529px;
+  height: 115px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 5px solid #FFA724;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accounts:hover{
+  border-radius: 15px;
+  border: 5px solid #FFA724;
+  background: #FFD18C;
+}
+
+ .type-of-account{
+  width: 179px;
+  color: #000;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+ 
+}
+.money{
+  width: 296.24px;
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.money , .type-of-account {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border: 1px soild red;;
+}
