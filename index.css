@@ -188,6 +188,7 @@ h3 {
   background: var(--orange) ; 
   border-radius: 15px;
   border: 5px solid var(--dark-orange); 
+  cursor: pointer;
 }
 
 .type-of-account {
