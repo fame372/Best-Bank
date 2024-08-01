@@ -154,10 +154,14 @@ main {
 }
 
 /* Accounts and money section */
-.main-accounts {
-  width: 50%;
+.finances {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  width: 80%;
 }
 
+/***ACCOUNTS***/
 h3 {
   color: var(--black); 
   font-family: "Inter", sans-serif;
@@ -182,6 +186,7 @@ h3 {
   background: var(--white); 
   border-radius: 15px;
   border: 5px solid var(--dark-orange); 
+  cursor: pointer;
 }
 
 .accounts:hover {
@@ -207,10 +212,77 @@ h3 {
 
 }
 
-@media (max-width:768px) {
-  .main-accounts {
-    width: 75%;
+/***SPENDINGS***/
+.spending-category {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 800;
+
+  background-color: var(--orange);
+
+  padding: .75em 1.5em;
+  border-radius: 15px;
+  margin: 1.1em 0;
+
+  position: relative;
+  transition: 0.6s;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 1);
+    width: 60px;
+    height: 100%;
+    top: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
   }
-  
+
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      transform: translateX(300px) skewX(-15deg);
+      transition: 0.7s;
+    }
+  }
 }
 
+@keyframes TransitioningBackground {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+
+.second-amount {
+  width: 80%;
+}
+
+.third-amount {
+  width: 70%;
+}
+
+.fourth-amount {
+  width: 60%;
+}
+
+.fifth-amount {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .finances {
+    grid-template-columns: 1fr;
+    width: 70%;
+  }
+}
